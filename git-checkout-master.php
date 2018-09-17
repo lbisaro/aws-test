@@ -15,7 +15,10 @@ foreach ($commands as $command)
         font-family: arial; 
         font-size: 16px;
     } 
-
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
     table,tr,td,th {
         border: 1px solid #555;
     }
