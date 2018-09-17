@@ -9,7 +9,7 @@ foreach ($commands as $command)
 {
     $output = array();
     $return_var = '';
-    $string = exec($command,$output,$return_var);
+    exec($command,$output);
     echo "<style>
     body {
         font-family: arial; 
@@ -23,19 +23,16 @@ foreach ($commands as $command)
         border: 1px solid #555;
     }
     </style>";
-    echo "<h3><code>".$command.'</code></h3>';
     echo "<table>
     <tr>
-        <th>output</th>
-        <th>return_var</th>
-        <th>string</th>
+        <th<code>".$command.'</code></th>
     </tr>
     <tr>
-        <td>";
-    pr($output);
-    echo "</td>
-        <td>".$return_var."</td>
-        <td>".$string."</td>
+        <td><pre>";
+    
+    print_r($output);
+    
+    echo "</pre></td>
     </tr>
     </table>";
     
