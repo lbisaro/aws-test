@@ -3,6 +3,7 @@ include_once "function.php";
 
 $commands[] = "git checkout master";
 $commands[] = "git pull";
+$commands[] = "git describe --all";
 
 foreach ($commands as $command)
 {
