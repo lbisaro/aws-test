@@ -27,7 +27,9 @@ foreach ($commands as $command)
         <th>string</th>
     </tr>
     <tr>
-        <td>".$output."</td>
+        <td>";
+    pr($output);
+    echo "</td>
         <td>".$return_var."</td>
         <td>".$string."</td>
     </tr>
