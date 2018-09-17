@@ -22,7 +22,7 @@ foreach ($commands as $command)
         <td>".$return_var."</td>
         <td>".$string."</td>
     </tr>
-    </table>"
+    </table>";
     
 }
 
