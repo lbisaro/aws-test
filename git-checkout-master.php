@@ -8,7 +8,6 @@ $commands[] = "git describe --all";
 foreach ($commands as $command)
 {
     $output = array();
-    $return_var = '';
     exec($command,$output);
     echo "<style>
     body {
@@ -25,14 +24,22 @@ foreach ($commands as $command)
     </style>";
     echo "<table>
     <tr>
-        <th<code>".$command.'</code></th>
+        <th<code>".$command."</code></th>
     </tr>
     <tr>
-        <td><pre>";
+        <td>";
     
-    print_r($output);
+    if (!empty($output))
+    {
+        foreach($output as $str)
+            echo "<code>".$str."</code>";
+    }
+    else
+    {
+        echo "<i>NULL</i>";
+    }
     
-    echo "</pre></td>
+    echo "</td>
     </tr>
     </table>";
     
