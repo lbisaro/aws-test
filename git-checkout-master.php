@@ -7,7 +7,7 @@ foreach ($commands as $command)
 {
     $output = array();
     $return_var = '';
-    $string exec($command,$output,$return_var);
+    $string = exec($command,$output,$return_var);
     echo "<h3><code>".$command.'</code></h3>';
     echo "<h4>string</h4>";
     pr($string);
