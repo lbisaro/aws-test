@@ -2,6 +2,7 @@
 include_once "function.php";
 
 $commands[] = "git checkout master";
+$commands[] = "git pull";
 
 foreach ($commands as $command)
 {
@@ -9,12 +10,18 @@ foreach ($commands as $command)
     $return_var = '';
     $string = exec($command,$output,$return_var);
     echo "<h3><code>".$command.'</code></h3>';
-    echo "<h4>string</h4>";
-    pr($string);
-    echo "<h4>output</h4>";
-    pr($output);
-    echo "<h4>return_var</h4>";
-    pr($return_var);
+    echo "<table>
+    <tr>
+        <th>output</th>
+        <th>return_var</th>
+        <th>string</th>
+    </tr>
+    <tr>
+        <td>".$output."</td>
+        <td>".$return_var."</td>
+        <td>".$string."</td>
+    </tr>
+    </table>"
     
 }
 
