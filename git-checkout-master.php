@@ -24,7 +24,7 @@ foreach ($commands as $command)
     </style>";
     echo "<table>
     <tr>
-        <th<code>".$command."</code></th>
+        <th<code style='font-weight: bolrder;'>".$command."</code></th>
     </tr>
     <tr>
         <td>";
